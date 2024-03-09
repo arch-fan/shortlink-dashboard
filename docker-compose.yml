@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  shortlink:
+    build: .
+    container_name: shortlink-dashboard
+    environment:
+      - TURSO_URL=${TURSO_URL}
+      - TURSO_TOKEN=${TURSO_TOKEN}
+      - JWT_SECRET=${JWT_SECRET}
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}
+    ports:
+      - 4321:4321

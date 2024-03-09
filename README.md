@@ -1,54 +1,70 @@
-# Astro Starter Kit: Basics
+# Shortlink Dashboard
 
-```sh
-npm create astro@latest -- --template basics
-```
+<div align="center">
+    <img src="./public/favicon.svg" alt="Shortlink Dashboard Logo" width="200">
+</div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Overview
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**Shortlink Dashboard** is a powerful, self-hostable link shortening service designed to simplify your URLs in a personalized and secure manner. Works with Astro, Svelte, Tailwind and Turso.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Features
 
-## 🚀 Project Structure
+- **Self-hostable**: Full control over your data and infrastructure.
+- **Easy to Use**: Simplify long URLs in seconds through an intuitive user interface.
+- **Customizable**: Tailor the service to meet your specific needs.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Getting Started
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Prerequisites
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Before you begin, ensure you have Docker installed on your system. If you prefer to use Node.js directly, ensure you have Node.js and PNPM installed.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Installation
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. **Clone the repository:**
 
-## 🧞 Commands
+   ```sh
+   git clone --depth 1 https://github.com/arch-fan/shortlink-dashboard.git
+   cd shortlink-dashboard
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. **Environment Configuration:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   Edit the `.env` file to include your credentials and any other configuration settings.
 
-## 👀 Want to learn more?
+3. **Deployment:**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   You have two options for deployment:
+
+   - **Using Docker Compose:**
+
+     Deploy the service using Docker for easy and reliable containerization.
+
+     ```sh
+     docker-compose up -d --build
+     ```
+
+   - **Using npm/pnpm:**
+
+     Alternatively, use the npm script for deployment if you're not using Docker.
+
+     ```sh
+     npm run docker:deploy
+     ```
+
+## Usage
+
+Once deployed, access the Shortlink Dashboard through your web browser (server runs at port `1234`) to start creating and managing your short links. For detailed instructions on how to use the dashboard, refer to the user guide available in the repository.
+
+## Support
+
+For support, feature requests, or bug reporting, please open an issue in the GitHub repository.
+
+## Contributing
+
+Contributions are welcome! Feel fre to contribute.
+
+## License
+
+Shortlink Dashboard is licensed under [MIT License](LICENSE). Feel free to fork, modify, and use it in your projects.

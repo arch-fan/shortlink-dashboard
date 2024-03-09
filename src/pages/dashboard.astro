@@ -1,0 +1,11 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { LinksModel } from "@/models/links.model";
+import LinksViewer from "@/components/dashboard/LinksViewer.svelte";
+
+const links = await LinksModel.getLinks();
+---
+
+<Layout title="Dashboard" description="Dashboard">
+  <LinksViewer client:only="svelte" links={links} />
+</Layout>

@@ -1,0 +1,17 @@
+---
+import { LinksModel } from "@/models/links.model";
+
+const { link } = Astro.params;
+
+if (!link) {
+  return Astro.redirect("/");
+}
+
+const linkData = await LinksModel.getByName(link);
+
+if (linkData) {
+  return Astro.redirect(linkData.link);
+}
+
+return Astro.redirect("/404");
+---
