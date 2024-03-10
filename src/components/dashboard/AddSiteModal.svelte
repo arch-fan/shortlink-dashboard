@@ -47,7 +47,7 @@
 </script>
 
 <div
-  class={`w-screen top-0 z-50
+  class={`w-screen top-0 z-50 modal
    left-0 h-screen backdrop-blur-sm grid place-items-center fixed bg-transparent p-2 ${isOpen ? "" : "hidden"}`}
   on:click|self={closeModal}
   aria-hidden="true"
@@ -88,3 +88,21 @@
     >
   </div>
 </div>
+
+<style>
+  @keyframes appear {
+    0% {
+      scale: 0;
+    }
+    80% {
+      scale: 1.1;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+
+  .modal {
+    animation: appear 0.2s ease-in-out;
+  }
+</style>
