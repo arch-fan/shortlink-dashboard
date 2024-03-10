@@ -53,10 +53,10 @@
   aria-hidden="true"
 >
   <div
-    class="max-w-xl h-fit bg-black inset-0 m-auto w-full flex flex-col p-2 border border-primary-highlight text-white rounded"
+    class="max-w-lg h-fit bg-black inset-0 m-auto w-full flex flex-col p-2 border border-primary-border text-white rounded"
     aria-hidden="true"
   >
-    <h2 class="text-center">Add a Link</h2>
+    <h2 class="text-center text-xl">Add a Link</h2>
     <form on:submit={handleSubmit} class="flex flex-col gap-4 py-8">
       <input
         type="text"
