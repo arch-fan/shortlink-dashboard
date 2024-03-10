@@ -5,6 +5,7 @@
   },
   "linter": {
     "enabled": true,
+    "ignore": ["src/*.svelte", "src/*.astro"],
     "rules": {
       "recommended": true
     }
