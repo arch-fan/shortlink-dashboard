@@ -27,3 +27,9 @@ const { title, description } = Astro.props;
     <slot />
   </body>
 </html>
+
+<style is:global>
+  input {
+    @apply placeholder:text-[#525252];
+  }
+</style>
